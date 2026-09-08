@@ -20,7 +20,7 @@ public class Main {
 
 
         BasicProgram basicProgram = new BasicProgram();
-        System.out.println(basicProgram.isPalidrome(121));
+        System.out.println(basicProgram.isArmStrongNumber(-370));
 
 
     }

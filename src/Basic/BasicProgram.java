@@ -13,6 +13,17 @@ public class BasicProgram {
         return true;
     }
 
+    public boolean isPalindrome(int num) {
+        int temp = num;
+        int reverse = 0;
+        while (temp != 0) {
+            int digit = temp % 10;
+            reverse = reverse * 10 + digit;
+            temp = temp / 10;
+        }
+        return num == reverse;
+    }
+
     public void fibonacciNumber(int num) {
         int a = 0;
         int b = 1;
@@ -28,22 +39,30 @@ public class BasicProgram {
         }
     }
 
-    public int nthFibonacci(int num) {
-        if (num <= 1) {
-            return num;
-        }
+    public boolean isArmStrongNumber(int num) {
 
-        return nthFibonacci(num - 1) + nthFibonacci(num - 2);
-    }
+        if (num < 0) return false;
 
-    public boolean isPalidrome(int num) {
         int temp = num;
-        int reverse = 0;
+        int sum = 0;
+
+        int digits = String.valueOf(num).length();
+
         while (temp != 0) {
             int digit = temp % 10;
-            reverse = reverse * 10 + digit;
+            int power = 1;
+            for (int i = 0; i < digits; i++) {
+                power = power * digit;
+            }
+
+            sum = sum + power;
             temp = temp / 10;
+
         }
-        return num == reverse;
+
+        return sum == num;
+
     }
+
+
 }
