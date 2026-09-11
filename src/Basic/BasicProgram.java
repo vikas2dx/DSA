@@ -65,4 +65,27 @@ public class BasicProgram {
     }
 
 
+    public int secondLargestNumber(int[] nums) {
+        int largest = Integer.MIN_VALUE;
+        int secondlargest = Integer.MIN_VALUE;
+
+
+        if (nums == null || nums.length < 2) {
+            throw new IllegalArgumentException("Array must contains least 2 elements");
+        }
+
+        for (int num : nums) {
+            if (num > largest) {
+                secondlargest = largest;
+                largest = num;
+            } else if (num > secondlargest && num < largest) {
+                secondlargest = num;
+            }
+
+        }
+        return secondlargest;
+
+    }
+
+
 }
