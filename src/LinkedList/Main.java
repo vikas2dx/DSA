@@ -21,7 +21,7 @@ public class Main {
 
         BasicProgram basicProgram = new BasicProgram();
         int[] nums = {78, 89, 7, 9, 68, 89, 78};
-        System.out.println(basicProgram.secondLargestNumber(nums));
+        System.out.println(basicProgram.isPalindrome("madam"));
 
 
     }
