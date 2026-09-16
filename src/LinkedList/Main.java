@@ -20,8 +20,8 @@ public class Main {
 
 
         BasicProgram basicProgram = new BasicProgram();
-        int[] nums = {78, 89, 7, 9, 68, 89, 78};
-        System.out.println(basicProgram.isPalindrome("madam"));
+        int[] nums = {1, 2, 3, 2, 1};
+        System.out.println(basicProgram.countCharacter("vikas singh", 's'));
 
 
     }

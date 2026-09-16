@@ -138,5 +138,83 @@ public class BasicProgram {
         return true;
     }
 
+    public boolean isLeapYear(int year) {
+
+        return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
+    }
+
+
+    public int countDigits(int num) {
+        num = Math.abs(num);
+
+        if (num == 0) return 1;
+
+        int count = 0;
+        while (num != 0) {
+            num = num / 10;
+            count++;
+        }
+
+        return count;
+
+    }
+
+    public int reverseNumber(int num) {
+
+        int reverse = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+            reverse = reverse * 10 + digit;
+            num = num / 10;
+        }
+
+        return reverse;
+
+    }
+
+
+    public int gcd(int a, int b) {
+
+        while (b != 0) {
+            int remainder = a % b;
+            a = b;
+            b = remainder;
+        }
+
+        return a;
+
+    }
+
+    public boolean isMirrorArray(int[] nums) {
+
+
+        if (nums == null) return false;
+        int left = 0;
+        int right = nums.length - 1;
+
+        while (left < right) {
+            if (nums[left] != nums[right]) return false;
+
+            left++;
+            right--;
+        }
+
+        return true;
+    }
+
+    public int countCharacter(String text, char target) {
+        if (text == null) return 0;
+        int count = 0;
+        for (int i = 0; i < text.length(); i++) {
+
+            if (text.charAt(i) == target) {
+                count++;
+            }
+        }
+
+        return count;
+
+    }
 
 }
