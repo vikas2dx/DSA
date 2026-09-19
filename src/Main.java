@@ -26,7 +26,7 @@ public class Main {
 
 
         ArrayPrograms arrayPrograms = new ArrayPrograms();
-        arrayPrograms.removeDuplicateValues(new int[]{1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4});
+        System.out.println(arrayPrograms.maxSumSubArray(new int[]{1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4}, 3));
 
 
     }

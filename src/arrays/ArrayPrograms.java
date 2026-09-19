@@ -22,4 +22,32 @@ public class ArrayPrograms {
 
 
     }
+
+    public int maxSumSubArray(int[] nums, int k) {
+
+        if (nums == null || nums.length < k || k <= 0) {
+            throw new IllegalArgumentException("Invalid Input");
+        }
+        int windowSum = 0;
+
+        for (int i = 0; i < k; i++) {
+            windowSum = windowSum + nums[i];
+
+        }
+        int maxSum = windowSum;
+
+        for (int i = k; i < nums.length; i++) {
+
+            windowSum = windowSum + nums[i] - nums[i - k];
+
+            if (windowSum > maxSum) {
+                maxSum = windowSum;
+            }
+
+        }
+
+        return maxSum;
+
+
+    }
 }
