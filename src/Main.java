@@ -1,4 +1,3 @@
-import Basic.BasicProgram;
 import arrays.ArrayPrograms;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -26,7 +25,7 @@ public class Main {
 
 
         ArrayPrograms arrayPrograms = new ArrayPrograms();
-        System.out.println(arrayPrograms.maxSumSubArray(new int[]{1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4}, 3));
+        System.out.println(arrayPrograms.maxSumSubArrayKadane(new int[]{1, 2, -8, 3, 4, 5}));
 
 
     }
