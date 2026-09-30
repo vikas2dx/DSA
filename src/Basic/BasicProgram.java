@@ -63,30 +63,7 @@ public class BasicProgram {
         return sum == num;
 
     }
-
-
-    public int secondLargestNumber(int[] nums) {
-        int largest = Integer.MIN_VALUE;
-        int secondlargest = Integer.MIN_VALUE;
-
-
-        if (nums == null || nums.length < 2) {
-            throw new IllegalArgumentException("Array must contains least 2 elements");
-        }
-
-        for (int num : nums) {
-            if (num > largest) {
-                secondlargest = largest;
-                largest = num;
-            } else if (num > secondlargest && num < largest) {
-                secondlargest = num;
-            }
-
-        }
-        return secondlargest;
-
-    }
-
+    
 
     public int factorialRecursion(int num) {
 
@@ -217,24 +194,5 @@ public class BasicProgram {
 
     }
 
-
-    public static int removeDuplicates(int[] nums) {
-
-        if (nums == null || nums.length == 0) {
-            return 0;
-        }
-
-        int slow = 0;
-
-        for (int fast = 1; fast < nums.length; fast++) {
-
-            if (nums[fast] != nums[slow]) {
-                slow++;
-                nums[slow] = nums[fast];
-            }
-        }
-
-        return slow + 1;
-    }
 
 }

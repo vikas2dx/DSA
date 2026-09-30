@@ -25,7 +25,10 @@ public class Main {
 
 
         ArrayPrograms arrayPrograms = new ArrayPrograms();
-        System.out.println(arrayPrograms.maxSumSubArrayKadane(new int[]{1, 2, -8, 3, 4, 5}));
+        int[] nums = {1, 2, 3, 2, 1};
+
+
+        System.out.println(arrayPrograms.rangeSumQuery(nums, 1, 3));
 
 
     }

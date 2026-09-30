@@ -2,7 +2,50 @@ package arrays;
 
 public class ArrayPrograms {
 
+    public int secondLargestNumber(int[] nums) {
+        int largest = Integer.MIN_VALUE;
+        int secondlargest = Integer.MIN_VALUE;
 
+
+        if (nums == null || nums.length < 2) {
+            throw new IllegalArgumentException("Array must contains least 2 elements");
+        }
+
+        for (int num : nums) {
+            if (num > largest) {
+                secondlargest = largest;
+                largest = num;
+            } else if (num > secondlargest && num < largest) {
+                secondlargest = num;
+            }
+
+        }
+        return secondlargest;
+
+    }
+
+    // Prefix Sum: Range sum Query
+    public int rangeSumQuery(int[] nums, int left, int right) {
+
+        if (nums == null || nums.length == 0) {
+            throw new IllegalArgumentException("Invalid Input");
+        }
+
+        if (left < 0 || right >= nums.length || left > right) {
+            throw new IllegalArgumentException("Invalid Range");
+        }
+
+        int[] prefixSum = new int[nums.length + 1];
+
+        for (int i = 0; i < nums.length; i++) {
+            prefixSum[i + 1] = prefixSum[i] + nums[i];
+        }
+
+        return prefixSum[right + 1] - prefixSum[left];
+
+    }
+
+    // Two Pointer: remove duplicates from sorted array
     public void removeDuplicateValues(int[] nums) {
 
         int slow = 0;
@@ -23,6 +66,7 @@ public class ArrayPrograms {
 
     }
 
+    //sliding window : Find Maximum Sum Subarray of Size K
     public int maxSumSubArraySliding(int[] nums, int k) {
 
         if (nums == null || nums.length < k || k <= 0) {
@@ -51,6 +95,7 @@ public class ArrayPrograms {
 
     }
 
+    //Kadane: Find Maximum Subarray Sum
     public int maxSumSubArrayKadane(int[] nums) {
 
         if (nums == null || nums.length == 0) {
