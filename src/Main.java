@@ -27,10 +27,10 @@ public class Main {
 
 
         ArrayPrograms arrayPrograms = new ArrayPrograms();
-        int[] nums = {2, 7, 11, 15};
-        int target = 9;
+        int[] nums = {1, 2, 3, 1, 2};
+        int target = 3;
 
-        System.out.println((Arrays.toString(arrayPrograms.sumTwo(nums, target))));
+        System.out.println(arrayPrograms.prefixSumSubArray(nums, target));
 
 
     }
